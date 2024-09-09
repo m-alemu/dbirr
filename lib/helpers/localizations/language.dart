@@ -9,13 +9,7 @@ class Language {
 
   static List<Language> languages = [
     Language(Locale('en'), "English"),
-    Language(Locale('hi'), "हिंदी"),
     Language(Locale('es'), "Español"),
-    Language(
-      Locale('ar'),
-      "عربي",
-      true,
-    ),
     Language(Locale('fr'), "Français"),
   ];
 

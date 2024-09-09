@@ -5,7 +5,7 @@ class AuthService {
   static bool isLoggedIn = false;
 
   static User get dummyUser =>
-      User(-1, "webkit@getappui.com", "Denish", "Navadiya");
+      User(-1, "malemu@dbirr.com", "Denish", "Navadiya");
 
   static Future<Map<String, String>?> loginUser(
       Map<String, dynamic> data) async {

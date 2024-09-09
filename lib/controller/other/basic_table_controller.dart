@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:dbirr/models/product.dart';
 import 'package:flutter/material.dart';
 import 'package:dbirr/controller/my_controller.dart';
 import 'package:dbirr/helpers/extensions/string.dart';
@@ -27,7 +28,7 @@ class Data {
 }
 
 class BasicTableController extends MyController {
-  List<Data> datas = Data.factory();
+  List<Product> product = [];
   DataTableSource? data;
 
   BasicTableController();
@@ -37,7 +38,7 @@ class BasicTableController extends MyController {
   @override
   void onInit() {
     super.onInit();
-    data = MyData(datas);
+    data = MyData(product);
   }
 
   String getTag() {

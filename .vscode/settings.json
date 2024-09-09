@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "/home/malemu/New Projects/dbirr/linux"
+    "cmake.sourceDirectory": "/home/malemu/New Projects/dbirr/linux",
+    "cmake.ignoreCMakeListsMissing": true
 }

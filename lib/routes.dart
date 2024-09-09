@@ -22,7 +22,6 @@ import 'views/error_pages/coming_soon_page.dart';
 import 'views/error_pages/error_404.dart';
 import 'views/error_pages/error_500.dart';
 import 'views/error_pages/maintenance_page.dart';
-import 'views/extra_pages/pricing.dart';
 import 'views/ui/landing_page.dart';
 
 class AuthMiddleware extends GetMiddleware {
@@ -39,11 +38,6 @@ getPageRoute() {
     GetPage(
         name: '/',
         page: () => const DashboardPage(),
-        middlewares: [AuthMiddleware()]),
-
-    GetPage(
-        name: '/pricing',
-        page: () => const Pricing(),
         middlewares: [AuthMiddleware()]),
 
     GetPage(

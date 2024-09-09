@@ -1,3 +1,4 @@
+import 'package:dbirr/models/product.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/instance_manager.dart';
@@ -87,7 +88,7 @@ class _BasicTableState extends State<BasicTable>
                     )),
                     DataColumn(label: MyText.bodyMedium('Code')),
                     DataColumn(label: MyText.bodyMedium('Price')),
-                    DataColumn(label: MyText.bodyMedium('QTY')),
+                    DataColumn(label: MyText.bodyMedium('link')),
                     DataColumn(label: MyText.bodyMedium('Action')),
                   ],
                   columnSpacing: 230,
@@ -104,7 +105,7 @@ class _BasicTableState extends State<BasicTable>
 }
 
 class MyData extends DataTableSource with UIMixin {
-  List<Data> data = [];
+  List<Product> data = [];
 
   MyData(this.data);
 
@@ -129,9 +130,9 @@ class MyData extends DataTableSource with UIMixin {
           data[index].name,
           fontWeight: 600,
         )),
-        DataCell(MyText.bodyMedium(data[index].code.toString())),
-        DataCell(MyText.bodyMedium(data[index].amount.toString())),
-        DataCell(MyText.bodyMedium(data[index].qty.toString())),
+        DataCell(MyText.bodyMedium(data[index].category.toString())),
+        DataCell(MyText.bodyMedium(data[index].name.toString())),
+        DataCell(MyText.bodyMedium(data[index].price.toString())),
         DataCell(
           Align(
             alignment: Alignment.center,
